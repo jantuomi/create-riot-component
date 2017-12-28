@@ -1,12 +1,16 @@
 {
   "name": "create-riot-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create ES6 riot.js component",
   "main": "dist/index.js",
   "bin": {
     "create-riot-component": "./dist/index.js"
   },
   "author": "Jan Tuomi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jantuomi/create-riot-component"
+  },
   "license": "MIT",
   "scripts": {
     "build": "tsc --outDir dist",
