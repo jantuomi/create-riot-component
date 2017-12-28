@@ -7,7 +7,7 @@ import scss from './tag/scss';
 import index from './tag/index';
 import * as pkg from '../package.json';
 
-async function main(tagName: string) {
+async function main(tagName: string): Promise<void> {
   const name = tagName.toLocaleLowerCase();
   console.log(`Creating component ${name}...`);
 
@@ -23,8 +23,5 @@ program
   .action(name => {
     main(name);
   })
-  .action(() => {
-    console.log('No component name specified.');
-  })
-  .usage('create-riot-component [name]')
+  .usage('[name]')
   .parse(process.argv);

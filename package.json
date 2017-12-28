@@ -1,6 +1,6 @@
 {
   "name": "create-riot-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create ES6 riot.js component",
   "main": "dist/index.js",
   "bin": {
