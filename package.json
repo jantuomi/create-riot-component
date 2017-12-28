@@ -1,0 +1,25 @@
+{
+  "name": "create-riot-component",
+  "version": "1.0.0",
+  "description": "Create ES6 riot.js component",
+  "main": "dist/index.js",
+  "bin": {
+    "create-riot-component": "./dist/index.js"
+  },
+  "author": "Jan Tuomi",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --outDir dist",
+    "prepublish": "npm run build"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@types/es6-promise": "^0.0.33",
+    "commander": "^2.12.2",
+    "fs-extra": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.0",
+    "typescript": "^2.6.2"
+  }
+}
