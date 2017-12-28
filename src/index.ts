@@ -5,6 +5,7 @@ import * as program from 'commander';
 import tag from './tag/tag';
 import scss from './tag/scss';
 import index from './tag/index';
+import * as pkg from '../package.json';
 
 async function main(tagName: string) {
   const name = tagName.toLocaleLowerCase();
@@ -17,10 +18,13 @@ async function main(tagName: string) {
 };
 
 program
-  .version('1.0.0')
+  .version((<any> pkg).version)
   .arguments('<name>')
   .action(name => {
     main(name);
+  })
+  .action(() => {
+    console.log('No component name specified.');
   })
   .usage('create-riot-component [name]')
   .parse(process.argv);
